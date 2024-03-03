@@ -1,10 +1,11 @@
 mod log {
-    use std::fs::OpenOptions;
+    use std::fs::{File, OpenOptions};
     use std::io::{Seek, SeekFrom, Write};
     use std::net::Shutdown::Read;
     use std::os::unix::prelude::FileExt;
     use futures::AsyncWriteExt;
     use futures::future::err;
+    use rev_lines::{RawRevLines, RevLines};
 
     // Log interface
     //  logs are append only, delimited files
@@ -14,6 +15,34 @@ mod log {
         fn write(&mut self, data: Vec<u8>) -> BooleanResult;
 
         fn first(&mut self) -> ReadResult;
+    }
+
+    pub struct LogIterator {
+        inner_iter: RevLines<File>
+    }
+
+    impl LogIterator {
+        pub fn from(file: File) -> LogIterator {
+            let rev_lines = RevLines::new(file);
+            LogIterator{inner_iter: rev_lines}
+        }
+    }
+
+    impl Iterator for LogIterator {
+        type Item = String;
+
+        fn next(&mut self) -> Option<Self::Item> {
+            match self.inner_iter.next() {
+                None => None,
+                Some(result) => match result {
+                    Ok(s) => Some(s),
+                    Err(re) => {
+                        println!("failed to read next line, {}", re.to_string());
+                        None
+                    }
+                }
+            }
+        }
     }
 
     pub fn open(file_path: &str) -> Result<Box<dyn Log>, &str> {
@@ -98,11 +127,7 @@ mod tests {
     #[test]
     fn writes_to_disk() {
         clean_files();
-
-        let log_result = log::open("test-file");
-        assert!(log_result.is_ok());
-
-        let mut log = log_result.unwrap();
+        let mut log = log::open("test-file").expect("failed to open test-file");
 
         let write_result = log.write(Vec::from("some bytes"));
         assert!(write_result.is_ok());
@@ -117,5 +142,14 @@ mod tests {
         let file_contents = String::from_utf8(file_bytes);
         assert!(file_contents.is_ok());
         assert_eq!("some bytes\nsome more bytes\n", file_contents.unwrap())
+    }
+
+    #[test]
+    fn read_records_in_reverse() {
+        clean_files();
+
+        let log = log::open("test-file").expect("failed to open test-file");
+
+
     }
 }
