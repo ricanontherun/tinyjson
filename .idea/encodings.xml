@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="Encoding">
+    <file url="file://$USER_HOME$/.ideavimrc" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/../../pkg/mod/github.com/stretchr/testify@v1.8.0/assert/assertions.go" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/../../pkg/mod/golang.org/toolchain@v0.0.1-go1.22.4.linux-amd64/src/builtin/builtin.go" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/../../pkg/mod/golang.org/toolchain@v0.0.1-go1.22.4.linux-amd64/src/bytes/bytes.go" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/../../pkg/mod/golang.org/toolchain@v0.0.1-go1.22.4.linux-amd64/src/fmt/print.go" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/../../pkg/mod/golang.org/toolchain@v0.0.1-go1.22.4.linux-amd64/src/io/io.go" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/../../pkg/mod/golang.org/toolchain@v0.0.1-go1.22.4.linux-amd64/src/log/slog/logger.go" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/../../pkg/mod/golang.org/toolchain@v0.0.1-go1.22.4.linux-amd64/src/math/rand/v2/rand.go" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/../../pkg/mod/golang.org/toolchain@v0.0.1-go1.22.4.linux-amd64/src/sync/oncefunc.go" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/../../pkg/mod/golang.org/toolchain@v0.0.1-go1.22.4.linux-amd64/src/testing/testing.go" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/go.mod" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/go.sum" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/log/handle.go" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/log/iterator.go" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/log/iterator.md" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/log/iterator_test.go" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/log/log.go" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/log/log_test.go" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/log/long.lines" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/log/test-files/beyond-lies-the-wub.txt" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/log/test-files/paragraphs.txt" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/log/test-files/sentences.txt" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/log/test-files/words.txt" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/log/test.log" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/main.go" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/pkg/mod/github.com/stretchr/testify@v1.9.0/assert/assertions.go" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/pkg/mod/github.com/stretchr/testify@v1.9.0/require/require.go" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/test.log" charset="UTF-8" />
+    <file url="file://$USER_HOME$/sdk/go1.22.2/src/builtin/builtin.go" charset="UTF-8" />
+    <file url="file://$USER_HOME$/sdk/go1.22.2/src/errors/wrap.go" charset="UTF-8" />
+    <file url="file://$USER_HOME$/sdk/go1.22.2/src/io/io.go" charset="UTF-8" />
+    <file url="file://$USER_HOME$/sdk/go1.22.2/src/os/file.go" charset="UTF-8" />
+    <file url="file://$USER_HOME$/sdk/go1.22.2/src/os/file_posix.go" charset="UTF-8" />
+    <file url="file://$USER_HOME$/sdk/go1.22.2/src/runtime/mfinal.go" charset="UTF-8" />
+    <file url="file://$USER_HOME$/sdk/go1.22.2/src/runtime/panic.go" charset="UTF-8" />
+    <file url="file://$USER_HOME$/sdk/go1.22.2/src/strings/strings.go" charset="UTF-8" />
+    <file url="file://$USER_HOME$/sdk/go1.22.2/src/testing/testing.go" charset="UTF-8" />
+  </component>
+</project>
